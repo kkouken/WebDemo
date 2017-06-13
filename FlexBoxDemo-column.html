@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FlexBox弹性布局(上下排列column/column-reverse)-Demo</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: #f3f2ef;
+			font-family: sans-serif;
+			display: -webkit-flex; /* webkit内核浏览器的兼容性写法 */
+			display: flex;
+			-webkit-flex-direction: column; /* webkit内核浏览器的兼容性写法 */
+			flex: column;
+			/*
+
+			倒序
+			-webkit-flex-direction: column-reverse;
+			flex: column-reverse;
+
+			*/
+		}
+		img{
+			width: 150px;
+			height: 150px;
+		}
+		.peo{
+			padding: 30px 0;
+			text-align: center;
+			background: #e5e8e1;
+			box-shadow: 0 0 1px rgba(0, 0, 0, 0.2) inset;
+		}
+		.peo:nth-child(even){
+			margin-left: 0;
+		}
+		.peo h1{
+			color: #666;
+			font-weight: normal;
+			font-size: 1.5em;
+		}
+	</style>
+</head>
+<body>
+	<div class="peo">
+		<img src="./PNG/female-1.png" alt="">
+		<h1>female-1</h1>
+	</div>
+	<div class="peo">
+		<img src="./PNG/male-1.png" alt="">
+		<h1>male-1</h1>
+	</div>
+	<div class="peo">
+		<img src="./PNG/female-2.png" alt="">
+		<h1>female-2</h1>
+	</div>
+	<div class="peo">
+		<img src="./PNG/male-2.png" alt="">
+		<h1>male-2</h1>
+	</div>
+	<div class="peo">
+		<img src="./PNG/female-3.png" alt="">
+		<h1>female-3</h1>
+	</div>
+	<div class="peo">
+		<img src="./PNG/male-3.png" alt="">
+		<h1>male-3</h1>
+	</div>
+</body>
+</html>

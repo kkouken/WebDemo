@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FlexBox弹性布局(自动换行wrap)-Demo</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: #f3f2ef;
+			font-family: sans-serif;
+			display: -webkit-flex; /* webkit内核浏览器的兼容性写法 */
+			display: flex;
+			-webkit-flex-wrap: wrap; /* webkit内核浏览器的兼容性写法 */
+			flex: wrap;
+		}
+		img{
+			width: 150px;
+			height: 150px;
+		}
+		.peo{
+			-webkit-flex: 1 1 auto; 
+
+			/* 指定div元素的伸缩方式
+
+			第一个参数flex-grow：决定伸缩元素可扩展空间的分配，在此设置为1，表示每个元素的可扩展空间大小相等；
+
+			第二个参数flex-shrink：定义当元素超过容器的大小后的压缩比例，在此设置为1，表示每个元素的压缩能力相同；
+
+			第三个参数flex-basis：定义伸缩的基准值。在此设置为auto，表示自动分配空间；
+
+			 */
+			flex: 1 1 auto;
+			padding: 30px 0;
+			text-align: center;
+			background: #e5e8e1;
+			box-shadow: 0 0 1px rgba(0, 0, 0, 0.2) inset;
+		}
+		.peo:nth-child(even){
+			margin-left: 0;
+		}
+		.peo h1{
+			color: #666;
+			font-weight: normal;
+			font-size: 2em;
+		}
+	</style>
+</head>
+<body>
+	<div class="peo">
+		<img src="./PNG/female-1.png" alt="">
+		<h1>female-1</h1>
+	</div>
+	<div class="peo">
+		<img src="./PNG/male-1.png" alt="">
+		<h1>male-1</h1>
+	</div>
+	<div class="peo">
+		<img src="./PNG/female-2.png" alt="">
+		<h1>female-2</h1>
+	</div>
+	<div class="peo">
+		<img src="./PNG/male-2.png" alt="">
+		<h1>male-2</h1>
+	</div>
+	<div class="peo">
+		<img src="./PNG/female-3.png" alt="">
+		<h1>female-3</h1>
+	</div>
+	<div class="peo">
+		<img src="./PNG/male-3.png" alt="">
+		<h1>male-3</h1>
+	</div>
+</body>
+</html>
