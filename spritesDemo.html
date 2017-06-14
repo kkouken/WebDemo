@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+		}
+		li{
+			font-size: 32px;
+			color: #565656;
+			border-bottom: 1px solid #ccc;
+			line-height: 180px;
+			text-indent: 180px;
+			position: relative;
+		}
+		li::before{
+			content: "";
+			width: 155px;
+			height: 155px;
+			background: url(./PNG/sprites.png) no-repeat;
+			position: absolute;
+			top: 12px;
+			left: 12px;
+		}
+		li:nth-child(1)::before{
+			background-position: 2px 2px;
+		}
+		li:nth-child(2)::before{
+			background-position: 2px -151px;
+		}
+		li:nth-child(3)::before{
+			background-position: 2px -302px;
+		}
+		li:nth-child(4)::before{
+			background-position: 2px -454px;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>list-1</li>
+		<li>list-2</li>
+		<li>list-3</li>
+		<li>list-4</li>
+	</ul>
+</body>
+</html>
