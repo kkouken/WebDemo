@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>mobile terminal demo</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			font-family: sans-serif;
+			background: #000;
+			text-align: center;
+		}
+		button{
+			font-size: 50px;
+			background: #000;
+			border: 1px solid #fff;
+			color: #fff;
+			padding: 10px 50px;
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	<button id="submit">Click!</button>
+</body>
+<script>
+	var submit = document.getElementById('submit')
+	submit.addEventListener("touchstart",submitForm)
+	function submitForm(event) {
+		submit.innerHTML =  "You touched me " + event.touches.length + " times"
+	}
+</script>
+</html>
