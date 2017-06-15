@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ios terminal demo (触摸点个数)</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			font-family: sans-serif;
+			background: #000;
+			text-align: center;
+		}
+		button{
+			font-size: 50px;
+			background: #000;
+			border: 1px solid #fff;
+			color: #fff;
+			padding: 10px 50px;
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	<button id="subone">Click!</button>
+	<br>
+	<button id="subtwo">gesturechange Event</button>
+</body>
+<script>
+	/*
+	除了touch事件外，在ios设备中还提供了gesture事件，即多指操作。当用户用一根手指放在按钮上时，
+	此时触发了touch，而此时将第二根手指也放到按钮上时，就触发了gesture事件，可以用gesturestart
+	来侦听这一事件。
+	 */
+	var subone = document.getElementById('subone')
+	var subtwo = document.getElementById('subtwo')
+	subone.addEventListener("gesturestat",submitForm)
+	function submitForm(event) {
+		subone.innerHTML =  "触摸点的个数为2"
+	}
+
+	/*
+	如果两根或多根手指在屏幕中移动，就会不断触发gesturechange事件，通过事件对象参数传回手指的旋转度，
+	缩放等数值，根据这些数据从中得知用户正在试图操作的手势。
+	 */
+	subtwo.addEventListener("gesturechange",changeForm)
+	function changeForm(event){
+		subtwo.innerHTML = "手指的旋转度为 " + event.rotation + " ,缩放值为 " + event.scale;
+	}
+</script>
+</html>

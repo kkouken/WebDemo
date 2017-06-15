@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>mobile terminal demo</title>
+	<title>mobile terminal demo (触摸点的X,Y位置的属性)</title>
 	<style>
 		*{
 			margin: 0;
@@ -30,7 +30,7 @@
 	var submit = document.getElementById('submit')
 	submit.addEventListener("touchstart",submitForm)
 	function submitForm(event) {
-		submit.innerHTML =  "Touched Points is" + event.touches.length
+		submit.innerHTML =  "X: " + event.touches[0].pageX + " ,Y: " + event.touches[0].pageY
 	}
 </script>
 </html>
